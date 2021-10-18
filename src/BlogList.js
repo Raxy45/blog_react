@@ -10,14 +10,6 @@ const BlogList = ({ blogs, title, deleteBlog }) => {
         <div className="blog-preview" key={blog.id}>
           <h2>{blog.title}</h2>
           <p>Written by {blog.author}</p>
-          {/*here, the deleteblog is a prop and we're using it here*/}
-          <button
-            onClick={() => {
-              deleteBlog(blog.id);
-            }}
-          >
-            delete !
-          </button>
         </div>
       ))}
     </div>
