@@ -3,6 +3,7 @@ import Home from "./Home";
 import Create from "./Create";
 import BlogDetails from "./BlogDetails";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import NotFound from "./NotFound";
 
 function App() {
   return (
@@ -25,6 +26,11 @@ function App() {
             <Route path="/blogs/:id">
               {/* the id will be passed as param to the BlogDetails component */}
               <BlogDetails />
+            </Route>
+            <Route path="*">
+              {/* this route acts as default in switch case, for undefined routes
+              this route would be served */}
+              <NotFound />
             </Route>
           </Switch>
         </div>
